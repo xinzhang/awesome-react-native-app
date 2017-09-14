@@ -23,7 +23,38 @@ var styles = StyleSheet.create({
   });
 
 export default class Dashboard extends Component {
-    render() {
+    makeBackground(btn) {
+        var obj = {
+          flexDirection: 'row',
+          alignSelf: 'stretch',
+          justifyContent: 'center',
+          flex: 1
+        };
+    
+        if (btn === 0) {
+          obj.backgroundColor = '#48BBEC';
+        } else if (btn === 1) {
+          obj.backgroundColor = '#E77AAE';
+        } else {
+          obj.backgroundColor = '#758BF4';
+        }
+    
+        return obj;
+      }
+
+      goToProfile() {
+
+      }
+
+      goToRepos() {
+
+      }
+
+      goToNotes() {
+
+      }
+      
+      render() {
         return (
             <View style={styles.container}>
                 <Image 
