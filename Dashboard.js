@@ -7,6 +7,8 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import Notes from './Notes';
+
 var styles = StyleSheet.create({
     container: {
       marginTop: 65,
@@ -43,7 +45,10 @@ export default class Dashboard extends Component {
       }
 
       goToProfile() {
-
+        this.props.navigator.push({
+            title: 'Notes',
+            component: Notes
+        })
       }
 
       goToRepos() {
@@ -51,9 +56,12 @@ export default class Dashboard extends Component {
       }
 
       goToNotes() {
-
+        this.props.navigator.push({
+            title: 'Notes',
+            component: Notes
+        })
       }
-      
+
       render() {
         return (
             <View style={styles.container}>
